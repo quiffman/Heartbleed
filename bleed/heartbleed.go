@@ -115,7 +115,7 @@ func Heartbleed(tgt *Target, payload []byte) (out []byte, err error) {
 			err = Safe
 			return
 		}
-	case <-time.After(6 * time.Second):
+	case <-time.After(30 * time.Second):
 		err = Timeout
 		conn.Close()
 		return
